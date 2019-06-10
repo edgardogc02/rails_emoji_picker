@@ -60,17 +60,13 @@ module RailsEmojiPicker
   end
 
   def insert_image_to_image_tag(string, img)
-    return stanadrt_replace(string, img) unless defined? Rails
+    return standart_replace(string, img) unless defined? Rails
 
-    if Rails.env.development?
-      stanadrt_replace(string, img)
-    elsif Rails.env.production?
-      url = image_tag("emoji/#{img[:name]}.png")[/img.*?src="(.*?)"/i, 1]
-      string.gsub!(img[:char], url)
-    end
+    url = image_tag("emoji/#{img[:name]}.png")[/img.*?src="(.*?)"/i, 1]
+    string.gsub!(img[:char], url)
   end
 
-  def stanadrt_replace(string, img)
+  def standart_replace(string, img)
     string.gsub!(img[:char], "#{Emoji.asset_host}#{Emoji.asset_path}/#{img[:name]}.png")
   end
 
