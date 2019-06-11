@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 span.emoji,
 span.emoji-inner {
     text-indent: -9999px;
@@ -98,23 +97,21 @@ span.emoji-inner {
     height: 100%;
 }
 img.emoji {
-    width: 1.3em;
-    height: 1.3em;
+    width: 1.7em;
+    height: 1.7em;
 }
 .emoji-picker-container {
     position: relative;
-    display: inline-block;
-    min-width: 300px;
 }
 .emoji-picker-icon {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -22px;
+    top: 16px;
     font-size: 20px;
     opacity: 0.7;
     z-index: 100;
     transition: none;
-    color: #296762;
+    color: #555555;
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -127,9 +124,6 @@ img.emoji {
 }
 .emoji-picker-icon:hover {
     opacity: 1;
-}
-.emoji-picker-icon.parent-has-scroll {
-    right: 28px;
 }
 .emoji-wysiwyg-editor:empty:before {
     content: attr(placeholder);
@@ -163,9 +157,6 @@ img.emoji {
 svg:not(:root) {
     overflow: hidden;
 }
-.emoji-wysiwyg-editor.parent-has-scroll {
-    padding-right: 40px;
-}
 .emoji-wysiwyg-editor.single-line-editor {
     min-height: 35px;
     height: inherit;
@@ -178,8 +169,10 @@ svg:not(:root) {
 }
 .emoji-menu {
     position: absolute;
+    top: -255px !important;
+    left: 118px !important;
     z-index: 999;
-    width: 225px;
+    width: 300px;
     border: 1px solid #dfdfdf;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -226,36 +219,42 @@ svg:not(:root) {
 }
 .emoji-menu-tabs .icon-recent-selected {
     background-position: -9px -277px;
+    border-bottom: 1px #409DDB solid;
 }
 .emoji-menu-tabs .icon-smile {
     background-position: -9px -34px;
 }
 .emoji-menu-tabs .icon-smile-selected {
     background-position: -9px -5px;
+    border-bottom: 1px #409DDB solid;
 }
 .emoji-menu-tabs .icon-flower {
     background-position: -9px -145px;
 }
 .emoji-menu-tabs .icon-flower-selected {
     background-position: -9px -118px;
+    border-bottom: 1px #409DDB solid;
 }
 .emoji-menu-tabs .icon-bell {
     background-position: -9px -89px;
 }
 .emoji-menu-tabs .icon-bell-selected {
     background-position: -9px -61px;
+    border-bottom: 1px #409DDB solid;
 }
 .emoji-menu-tabs .icon-car {
     background-position: -9px -196px;
 }
 .emoji-menu-tabs .icon-car-selected {
     background-position: -9px -170px;
+    border-bottom: 1px #409DDB solid;
 }
 .emoji-menu-tabs .icon-grid {
     background-position: -9px -248px;
 }
 .emoji-menu-tabs .icon-grid-selected {
     background-position: -9px -222px;
+    border-bottom: 1px #409DDB solid;
 }
 .emoji-menu-tabs .icon-bell,
 .emoji-menu-tabs .icon-car,
@@ -334,7 +333,7 @@ sup {
     vertical-align: baseline;
 }
 .emoji {
-    margin: 5px;
+    margin: 1px;
 }
 #emoji-wrapper::-webkit-scrollbar {
     width: 12px;
